@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+Author: Juan S Neira Galvis
+Class Name: awakeManager
+Purpose: Rotates Showcase of car models
+*/
 public class awakeManager : MonoBehaviour
 {
 

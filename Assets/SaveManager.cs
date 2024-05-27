@@ -5,6 +5,15 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Author: S Neira Galvis
+Class Name: SaveManager
+Purpose:Saving System to store Players information
+
+*/
+
+
+
 public class SaveManager : MonoBehaviour
 {
     public static SaveManager instance 
@@ -13,10 +22,12 @@ public class SaveManager : MonoBehaviour
         get; private set;
     }
 
-//Things inside the save
+//Variables for things inside the save
 
 public int currentCar;
     private void Awake()
+
+    //to load Saved data file at the start of the game
     {
         if (instance != null && instance != this)
         {
@@ -31,7 +42,7 @@ public int currentCar;
         }
 
     }
-
+    //Method to load data file
     public void Load()
     {
         if(File.Exists(Application.persistentDataPath + "/playerInfo.dat"))
@@ -48,6 +59,7 @@ public int currentCar;
 
     }
 
+    //Method to save the user data in whatever directory the system thinks is best
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
@@ -61,6 +73,7 @@ public int currentCar;
 
     [Serializable]
 
+    //Variables we are storing
     class PlayerData_Storage
     {
         public int currentCar;
