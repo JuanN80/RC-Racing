@@ -5,16 +5,24 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
 
-
-    void OnTriggerEnter(Collider col)
+private TrackCheckpoints abc;
+   private void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Player");
+        
+        if(col.);
         {
-            finishLine.LoadLevelNum(1);
-
+            abc.PlayerThroughCheckpoint(this);
+            
         }
 
 
+
+
+    }
+
+    public void SetTrackCheckPoints(TrackCheckpoints checkpointa)
+    {
+        abc = checkpointa;
 
 
     }

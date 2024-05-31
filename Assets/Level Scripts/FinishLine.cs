@@ -1,23 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FinishLine : MonoBehaviour
 {
-    private LoadLevel finishLine;
+    
     void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject.tag == "Player" || );
+        if(col.gameObject.tag == "Player");
         {
-            finishLine.LoadLevelNum(1);
-
+            SceneManager.LoadScene("Menu");
         }
        
 
     }
-
-
-
 
 }
    

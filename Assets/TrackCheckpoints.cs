@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class TrackCheckpoints : MonoBehaviour
 {
-    private int checkpointnums;
+    public bool test = true;
+        private void Awake()
+        {
+            Transform checkpointsTransform = transform.Find("Checkpoint");
 
-    public TrackCheckpoints()
-    {
-
-
-
-
-    }
-    
-
+            foreach(Transform CheckPointsTransform in checkpointsTransform)
+            {
+                CheckPoint cho = checkpointsTransform.GetComponent<CheckPoint>();
+                cho.SetTrackCheckPoints(this);
 
 
+            }
 
+
+        }
+
+        public void PlayerThroughCheckpoint(CheckPoint checkpoint)
+        {
+            test = false;
+
+        }
 }
