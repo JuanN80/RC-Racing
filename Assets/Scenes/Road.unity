@@ -1950,7 +1950,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -410, y: 253}
+  m_AnchoredPosition: {x: -410, y: 258}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &375539147
@@ -5325,9 +5325,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 120340297762815318, guid: 27f69fe37e0c8c44f97be1aba8f406cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1139488672}
-    - targetCorrespondingSourceObject: {fileID: 120340297762815318, guid: 27f69fe37e0c8c44f97be1aba8f406cd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1139488671}
   m_SourcePrefab: {fileID: 100100000, guid: 27f69fe37e0c8c44f97be1aba8f406cd, type: 3}
 --- !u!4 &1139488669 stripped
 Transform:
@@ -5339,18 +5336,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 120340297762815318, guid: 27f69fe37e0c8c44f97be1aba8f406cd, type: 3}
   m_PrefabInstance: {fileID: 1139488668}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1139488671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139488670}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36978b05060188849bfa33c40d8dd756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1139488672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8291,8 +8276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carModels:
-  - {fileID: 2456388393017017149, guid: 6bdeb140b178821499d64ca08a664ac3, type: 3}
   - {fileID: 2343126007804529976, guid: 3039998f1985b064187e07a41a3e55af, type: 3}
+  - {fileID: 2456388393017017149, guid: 6bdeb140b178821499d64ca08a664ac3, type: 3}
   - {fileID: 3978112817376099949, guid: 20dbc35fbf047a547a08fac767b9c0c7, type: 3}
   - {fileID: 8557746499015102977, guid: 6c6f573c5c7232348a0607c861e1acf0, type: 3}
   - {fileID: 3920906963384531749, guid: 78232110e9c97c1489f7fd4fbb1671e7, type: 3}

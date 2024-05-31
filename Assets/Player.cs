@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -74,7 +75,12 @@ public class Player : MonoBehaviour
                 StartLap();
             }
 
-            else 
+             if (CurrentLap == 4)
+            {
+
+                 SceneManager.LoadScene("Menu");
+            }
+            else
             {
             return;
             }
