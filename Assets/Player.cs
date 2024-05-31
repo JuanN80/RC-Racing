@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private Transform checkpointsParent;
     private int checkpointCount;
     private int checkpointLayer;
+    public SystemSpawn systemSpawn;
+    
     
 
     void Awake()
@@ -50,12 +52,22 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        if (col.gameObject.CompareTag("Ground"))
+        {
+
+            systemSpawn.DeadPlayer();
+            Debug.Log("tOUCHED GROUND");
+
+
+        }
+
         if (col.gameObject.layer != checkpointLayer)
         {
 
          return;
 
         }
+
 
         //If this is the innital Checkpoint (Finish Line/Start Line)
 
@@ -73,6 +85,7 @@ public class Player : MonoBehaviour
             if (CurrentLap == 0 || lastCheckpointPassed == checkpointCount)
             {
                 StartLap();
+                systemSpawn.posRespawn = col.gameObject.transform;
             }
 
              if (CurrentLap == 4)
@@ -96,7 +109,12 @@ public class Player : MonoBehaviour
             
             lastCheckpointPassed++;
              Debug.Log("Checkpoint: " + lastCheckpointPassed);
+             systemSpawn.posRespawn = col.gameObject.transform;
+
         }
+
+
+
 
 
 

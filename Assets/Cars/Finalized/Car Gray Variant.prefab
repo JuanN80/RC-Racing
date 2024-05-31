@@ -100,6 +100,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7161434049256518651}
+    - targetCorrespondingSourceObject: {fileID: 3311311803080157842, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 724438564005907211}
   m_SourcePrefab: {fileID: 100100000, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
 --- !u!146 &278284433851956601 stripped
 WheelCollider:
@@ -291,6 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d278fcc34d082684085d3e96a7348426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  systemSpawn: {fileID: 724438564005907211}
 --- !u!82 &6510005321192306161
 AudioSource:
   m_ObjectHideFlags: 0
@@ -483,6 +487,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &724438564005907211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2343126007804529976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172771a4c2b3f2846af5d43e167c9a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posRespawn: {fileID: 1553806333239212627}
+  posPlayer: {fileID: 3156922304338548610}
 --- !u!146 &2798538232382728798 stripped
 WheelCollider:
   m_CorrespondingSourceObject: {fileID: 3145262460232535540, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
