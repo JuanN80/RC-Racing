@@ -16,15 +16,12 @@ Purpose:Saving System to store Players information
 
 public class SaveManager : MonoBehaviour
 {
-    public static SaveManager instance 
-    {
-
-        get; private set;
-    }
+    public static SaveManager instance { get; private set;}
 
 //Variables for things inside the save
 
 public int currentCar;
+public double BestLapTime;
     private void Awake()
 
     //to load Saved data file at the start of the game
@@ -52,6 +49,7 @@ public int currentCar;
             PlayerData_Storage data = (PlayerData_Storage)bf.Deserialize(file);
 
             currentCar = data.currentCar;
+            BestLapTime = data.BestLapTime;
 
             file.Close();
 
@@ -65,6 +63,8 @@ public int currentCar;
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
         PlayerData_Storage data = new PlayerData_Storage();
+        data.currentCar = currentCar;
+        data.BestLapTime = BestLapTime;
 
        
         bf.Serialize(file,data);
@@ -77,6 +77,7 @@ public int currentCar;
     class PlayerData_Storage
     {
         public int currentCar;
+        public double BestLapTime;
     }
 
 

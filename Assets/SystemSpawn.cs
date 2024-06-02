@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SystemSpawn : MonoBehaviour
 {
-    private Transform posRespawn;
+    public Transform posRespawn;
     public Transform posPlayer;
    
     public void DeadPlayer()

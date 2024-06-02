@@ -123,6 +123,10 @@ public class PrometeoCarController : MonoBehaviour
       public GameObject handbrakeButton;
       PrometeoTouchInput handbrakePTI;
 
+      //Respawn Control
+
+      public SystemSpawn systemSpawn;
+
     //CAR DATA
 
       [HideInInspector]
@@ -363,6 +367,8 @@ public class PrometeoCarController : MonoBehaviour
         if(!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f){
           ResetSteeringAngle();
         }
+         
+        
 
       }
 

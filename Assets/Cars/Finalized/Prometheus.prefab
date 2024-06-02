@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 3194971449563185625}
   - component: {fileID: 4776616639023964495}
   - component: {fileID: 3119376866563267844}
+  - component: {fileID: 800460610822326591}
   m_Layer: 0
   m_Name: Prometheus
   m_TagString: Player
@@ -433,6 +434,7 @@ MonoBehaviour:
   turnRightButton: {fileID: 0}
   turnLeftButton: {fileID: 0}
   handbrakeButton: {fileID: 0}
+  systemSpawn: {fileID: 0}
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
@@ -654,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d278fcc34d082684085d3e96a7348426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  systemSpawn: {fileID: 800460610822326591}
 --- !u!82 &3119376866563267844
 AudioSource:
   m_ObjectHideFlags: 0
@@ -750,6 +753,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &800460610822326591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978112817376099949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172771a4c2b3f2846af5d43e167c9a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posRespawn: {fileID: 5599291713146579346}
+  posPlayer: {fileID: 5647691479067882099}
 --- !u!1 &5171258879659647426
 GameObject:
   m_ObjectHideFlags: 0

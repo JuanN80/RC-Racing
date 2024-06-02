@@ -7,10 +7,11 @@ public class Player : MonoBehaviour
 {
 
     
-    public float BestLapTime {get; private set;} = Mathf.Infinity;
+    public float BestLapTime {get; set;} = Mathf.Infinity;
     public float LastLapTime { get; private set;} = 0;
     public float CurrentLapTime { get; private set;} = 0;
     public int CurrentLap {get; private set;} = 0;
+    public double record;
     
     private float lapTimerTimestamp;
     private int lastCheckpointPassed = 0;
@@ -18,19 +19,25 @@ public class Player : MonoBehaviour
     private int checkpointCount;
     private int checkpointLayer;
     public SystemSpawn systemSpawn;
+    public LoadLevel loadLevel;
     
     
 
-    void Awake()
+    void Start()
     {
 
 
         checkpointsParent = GameObject.Find("Checkpoints").transform;
         checkpointCount = checkpointsParent.childCount;
         checkpointLayer = LayerMask.NameToLayer("Checkpoint");
+        loadLevel = GameObject.Find("Loader").GetComponent<LoadLevel>();
+        CurrentLap = 0;
+        
         
  
     }
+
+
     
 
 
@@ -47,6 +54,10 @@ public class Player : MonoBehaviour
         LastLapTime = Time.time - lapTimerTimestamp;
         BestLapTime = Mathf.Min(LastLapTime, BestLapTime);
         Debug.Log("End Lap - LapTime was " + LastLapTime + "Seconds");
+        record = (double) BestLapTime;
+
+        SaveManager.instance.BestLapTime = record;
+        SaveManager.instance.Save();
 
     }
 
@@ -91,7 +102,7 @@ public class Player : MonoBehaviour
              if (CurrentLap == 4)
             {
 
-                 SceneManager.LoadScene("Menu");
+                loadLevel.LoadNextLevel();
             }
             else
             {
@@ -112,17 +123,17 @@ public class Player : MonoBehaviour
              systemSpawn.posRespawn = col.gameObject.transform;
 
         }
-
-
-
-
-
-
     }
 
     void Update()
     {
         CurrentLapTime = lapTimerTimestamp > 0 ? Time.time - lapTimerTimestamp : 0;
+        
+        if(Input.GetKey(KeyCode.E))
+         {
+
+          systemSpawn.DeadPlayer();
+         }
     }
 
     

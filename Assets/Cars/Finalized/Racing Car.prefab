@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 4954043281768429551}
   - component: {fileID: -7628026824607640776}
   - component: {fileID: 4970391047155263540}
+  - component: {fileID: 3784657472402297}
   m_Layer: 0
   m_Name: Racing Car
   m_TagString: Player
@@ -649,6 +650,7 @@ MonoBehaviour:
   turnRightButton: {fileID: 0}
   turnLeftButton: {fileID: 0}
   handbrakeButton: {fileID: 0}
+  systemSpawn: {fileID: 0}
   carSpeed: 0
   isDrifting: 0
   isTractionLocked: 0
@@ -678,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d278fcc34d082684085d3e96a7348426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  systemSpawn: {fileID: 3784657472402297}
 --- !u!82 &4970391047155263540
 AudioSource:
   m_ObjectHideFlags: 0
@@ -774,6 +777,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3784657472402297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920906963384531749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172771a4c2b3f2846af5d43e167c9a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posRespawn: {fileID: 5829762257783961561}
+  posPlayer: {fileID: 7641872660221188980}
 --- !u!1 &5329024429854554326
 GameObject:
   m_ObjectHideFlags: 0
