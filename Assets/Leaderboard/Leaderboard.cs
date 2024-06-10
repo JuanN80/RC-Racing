@@ -16,6 +16,7 @@ void Start()
 {
 
     GetLeaderboard();
+    
 }
     public void GetLeaderboard()
     {

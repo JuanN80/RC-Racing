@@ -5,14 +5,14 @@ using TMPro;
 public class recordManager : MonoBehaviour
 {
 
-    private double record;
+    private int record;
     [SerializeField] TextMeshProUGUI inputScore;
     [SerializeField] TMP_InputField inputName;
     
     void Start()
     {
-        record = SaveManager.instance.BestLapTime;
-        record = (int) record;
+        record = (int) SaveManager.instance.BestLapTime;
+
         inputScore.SetText(record.ToString());
 
     }
@@ -21,7 +21,7 @@ public class recordManager : MonoBehaviour
 
     public void SubmitScore()
     {
-        submitScoreEvent.Invoke(inputName.text, int.Parse(inputScore.text));
+        submitScoreEvent.Invoke(inputName.text, record);
 
 
 
